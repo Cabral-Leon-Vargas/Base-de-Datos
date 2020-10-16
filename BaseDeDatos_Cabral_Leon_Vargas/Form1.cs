@@ -57,7 +57,24 @@ namespace BaseDeDatos_Cabral_Leon_Vargas
         }
         private void GuardarUsuario()
         {
-            
+            string connection = "datasource=localhost;port=3306;username=MarcoJeanLT;password=Mjean2*2=4;database=datospersonales;";
+            string query = "insert into `datos personales`(`ID`, `Nombre(s)`, `Apellido Paterno`, `Apellido Materno`, `Edad`, `Direccion`) VALUES (NULL, '" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "')";
+            MySqlConnection conectionDatabase = new MySqlConnection(connection);
+            MySqlCommand databaseCommand = new MySqlCommand(query, conectionDatabase);
+            databaseCommand.CommandTimeout = 60;
+
+            try
+            {
+                conectionDatabase.Open();
+                MySqlDataReader reader1 = databaseCommand.ExecuteReader();
+                MessageBox.Show("Registro Exitoso");
+                conectionDatabase.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
 
 
         }
@@ -114,7 +131,35 @@ namespace BaseDeDatos_Cabral_Leon_Vargas
         }
         private void MostrarUsuario()
         {
-            
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("Falta llenar uno o más campos");
+            }
+            else if (textBox2.Text == "")
+            {
+                MessageBox.Show("Falta llenar uno o más campos");
+            }
+            else if (textBox3.Text == "")
+            {
+                MessageBox.Show("Falta llenar uno o más campos");
+            }
+            else if (textBox4.Text == "")
+            {
+                MessageBox.Show("Falta llenar uno o más campos");
+            }
+            else if (textBox5.Text == "")
+            {
+                MessageBox.Show("Falta llenar uno o más campos");
+            }
+            else
+            {
+                textBox1.Text = "";
+                textBox2.Text = "";
+                textBox3.Text = "";
+                textBox4.Text = "";
+                textBox5.Text = "";
+            }
+
         }
         private void Buscar()
         {
@@ -161,14 +206,43 @@ namespace BaseDeDatos_Cabral_Leon_Vargas
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-     
 
-                GuardarUsuario();
-                MostrarUsuario();
+      
+                if (textBox1.Text == "")
+                {
+                    MessageBox.Show("Falta llenar uno o más campos");
+                }
+                else if (textBox2.Text == "")
+                {
+                    MessageBox.Show("Falta llenar uno o más campos");
+                }
+                else if (textBox3.Text == "")
+                {
+                    MessageBox.Show("Falta llenar uno o más campos");
+                }
+                else if (textBox4.Text == "")
+                {
+                    MessageBox.Show("Falta llenar uno o más campos");
+                }
+                else if (textBox5.Text == "")
+                {
+                    MessageBox.Show("Falta llenar uno o más campos");
+                }
+                else
+                {
 
-        }
+                    GuardarUsuario();
+                    MostrarUsuario();
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                    textBox3.Text = "";
+                    textBox4.Text = "";
+                    textBox5.Text = "";
+                }
 
-        private void button2_Click_1(object sender, EventArgs e)
+            }
+
+            private void button2_Click_1(object sender, EventArgs e)
         {
             Buscar();
         }
@@ -270,4 +344,6 @@ namespace BaseDeDatos_Cabral_Leon_Vargas
             textBox6.Text = "";
         }
     }
+   
 }
+
