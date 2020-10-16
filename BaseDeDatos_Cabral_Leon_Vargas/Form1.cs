@@ -57,23 +57,7 @@ namespace BaseDeDatos_Cabral_Leon_Vargas
         }
         private void GuardarUsuario()
         {
-            string connection = "datasource=localhost;port=3306;username=MarcoJeanLT;password=Mjean2*2=4;database=datospersonales;";
-            string query = "insert into `datos personales`(`ID`, `Nombre(s)`, `Apellido Paterno`, `Apellido Materno`, `Edad`, `Direccion`) VALUES (NULL, '" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "')";
-            MySqlConnection conectionDatabase = new MySqlConnection(connection);
-            MySqlCommand databaseCommand = new MySqlCommand(query, conectionDatabase);
-            databaseCommand.CommandTimeout = 60;
-
-            try
-            {
-                conectionDatabase.Open();
-                MySqlDataReader reader1 = databaseCommand.ExecuteReader();
-                MessageBox.Show("Registro Exitoso");
-                conectionDatabase.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
 
 
         }
@@ -130,45 +114,7 @@ namespace BaseDeDatos_Cabral_Leon_Vargas
         }
         private void MostrarUsuario()
         {
-            string Connect = "datasource=localhost;port=3306;username=MarcoJeanLT;password=Mjean2*2=4;database=datospersonales;";
-            string query = "SELECT * FROM `datos personales`";
-            MySqlConnection databaseConnection = new MySqlConnection(Connect);
-            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-            commandDatabase.CommandTimeout = 60;
-            MySqlDataReader reader;
-
-            try
-            {
-                databaseConnection.Open();
-                reader = commandDatabase.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    listView1.Items.Clear();
-                    while (reader.Read())
-                    {
-                        string[] row = { reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5) };
-                        var ListViewItems = new ListViewItem(row);
-                        listView1.Items.Add(ListViewItems);
-                    }
-
-                }
-                else
-                {
-                    Console.WriteLine("No se encontraron los Datos");
-                }
-                databaseConnection.Close();
-                textBox1.Text = "";
-                textBox2.Text = "";
-                textBox3.Text = "";
-                textBox4.Text = "";
-                textBox5.Text = "";
-                textBox6.Text = "";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
+            
         }
         private void Buscar()
         {
@@ -215,37 +161,11 @@ namespace BaseDeDatos_Cabral_Leon_Vargas
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
-            {
-                MessageBox.Show("Falta llenar uno o más campos");
-            }
-            else if (textBox2.Text == "")
-            {
-                MessageBox.Show("Falta llenar uno o más campos");
-            }
-            else if (textBox3.Text == "")
-            {
-                MessageBox.Show("Falta llenar uno o más campos");
-            }
-            else if (textBox4.Text == "")
-            {
-                MessageBox.Show("Falta llenar uno o más campos");
-            }
-            else if (textBox5.Text == "")
-            {
-                MessageBox.Show("Falta llenar uno o más campos");
-            }
-            else
-            {
+     
 
                 GuardarUsuario();
                 MostrarUsuario();
-                textBox1.Text = "";
-                textBox2.Text = "";
-                textBox3.Text = "";
-                textBox4.Text = "";
-                textBox5.Text = "";
-            }
+
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -317,34 +237,7 @@ namespace BaseDeDatos_Cabral_Leon_Vargas
         private void button4_Click(object sender, EventArgs e)
         {
             ModificarUsuario();
-            if (textBox1.Text == "")
-            {
-                MessageBox.Show("Falta llenar uno o más campos");
-            }
-            else if (textBox2.Text == "")
-            {
-                MessageBox.Show("Falta llenar uno o más campos");
-            }
-            else if (textBox3.Text == "")
-            {
-                MessageBox.Show("Falta llenar uno o más campos");
-            }
-            else if (textBox4.Text == "")
-            {
-                MessageBox.Show("Falta llenar uno o más campos");
-            }
-            else if (textBox5.Text == "")
-            {
-                MessageBox.Show("Falta llenar uno o más campos");
-            }
-            else
-            {
-                textBox1.Text = "";
-                textBox2.Text = "";
-                textBox3.Text = "";
-                textBox4.Text = "";
-                textBox5.Text = "";
-            }
+
         }
 
         private void button5_Click(object sender, EventArgs e)
