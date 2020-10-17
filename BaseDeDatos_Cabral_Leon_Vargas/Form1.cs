@@ -76,7 +76,6 @@ namespace BaseDeDatos_Cabral_Leon_Vargas
             }
 
 
-
         }
         private void ModificarUsuario()
         {
@@ -92,7 +91,6 @@ namespace BaseDeDatos_Cabral_Leon_Vargas
                 MySqlDataReader reader1 = databaseCommand.ExecuteReader();
                 MessageBox.Show("Se actualizron correctamente los Datos");
                 conectionDatabase.Close();
-
             }
             catch (Exception ex)
             {
@@ -127,9 +125,8 @@ namespace BaseDeDatos_Cabral_Leon_Vargas
             {
                 MessageBox.Show(ex.Message);
             }
-
-
         }
+
         private void MostrarUsuario()
         {
             string Connect = "datasource=localhost;port=3306;username=MarcoJeanLT;password=Mjean2*2=4;database=datospersonales;";
@@ -213,13 +210,9 @@ namespace BaseDeDatos_Cabral_Leon_Vargas
 
         }
 
-
-
         private void button1_Click_1(object sender, EventArgs e)
         {
-
-      
-                if (textBox1.Text == "")
+               if (textBox1.Text == "")
                 {
                     MessageBox.Show("Falta llenar uno o más campos");
                 }
@@ -244,16 +237,16 @@ namespace BaseDeDatos_Cabral_Leon_Vargas
 
                     GuardarUsuario();
                     MostrarUsuario();
+
                     textBox1.Text = "";
                     textBox2.Text = "";
                     textBox3.Text = "";
                     textBox4.Text = "";
                     textBox5.Text = "";
                 }
-
             }
 
-            private void button2_Click_1(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             Buscar();
         }
@@ -367,10 +360,6 @@ namespace BaseDeDatos_Cabral_Leon_Vargas
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button6_Click_1(object sender, EventArgs e)
         {
@@ -381,7 +370,6 @@ namespace BaseDeDatos_Cabral_Leon_Vargas
             textBox5.Text = "";
             textBox6.Text = "";
         }
-    }
-   
+    }   
 }
 
