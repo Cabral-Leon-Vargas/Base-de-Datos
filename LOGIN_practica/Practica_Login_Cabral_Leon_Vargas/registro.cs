@@ -17,7 +17,7 @@ namespace Practica_Login_Cabral_Leon_Vargas
         {
             InitializeComponent();
         }
-
+        //aqui va la parte del codigo
         private void registro_Load(object sender, EventArgs e)
         {
 
@@ -35,7 +35,18 @@ namespace Practica_Login_Cabral_Leon_Vargas
 
         private void crear_btn_Click(object sender, EventArgs e)
         {
-
+            if (reg_user_txt.Text == "")
+            {
+                MessageBox.Show("Falta llenar uno o más campos");
+            }
+            else if (reg_psw_txt.Text == "")
+            {
+                MessageBox.Show("Falta llenar uno o más campos");
+            }
+            else 
+            {
+              // aqui va "Reg();"
+            }
         }
 
         private void reg_Click(object sender, EventArgs e)
