@@ -22,7 +22,36 @@ namespace Practica_Login_Cabral_Leon_Vargas
         {
 
         }
+        private void Log()
+        {
+            string connection = "datasource=localhost;port=3306;username=MarcoJeanLT;password=Mjean2*2=4;database=login;";
+            string query = "SELECT * FROM log WHERE usuario= '" + user_txt.Text + "'AND contraseña = '" + psw_txt.Text + "' ";
+            MySqlConnection conectionDatabase = new MySqlConnection(connection);
+            MySqlCommand databaseCommand = new MySqlCommand(query, conectionDatabase);
+            databaseCommand.CommandTimeout = 60;
+            MySqlDataReader reader;
 
+            try
+            {
+                conectionDatabase.Open();
+                reader = databaseCommand.ExecuteReader();
+                if (reader.Read())
+                {
+                    MessageBox.Show("Bienvenido " + user_txt.Text, "Entrada Exitosa");
+                }
+                else
+                {
+                    MessageBox.Show("Usuario/Contraseña incorrectos. Intentelo de nuevo", "ERROR");
+                }
+                conectionDatabase.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Intentelo de nuevo");
+            }
+
+        }
         private void user_txt_TextChanged(object sender, EventArgs e)
         {
 
@@ -35,7 +64,7 @@ namespace Practica_Login_Cabral_Leon_Vargas
 
         private void login_button_Click(object sender, EventArgs e)
         {
-
+            Log();
         }
 
         private void Regist_clic_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
