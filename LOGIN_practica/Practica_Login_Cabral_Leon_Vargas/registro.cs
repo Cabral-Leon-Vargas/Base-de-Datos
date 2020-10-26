@@ -37,15 +37,19 @@ namespace Practica_Login_Cabral_Leon_Vargas
         {
             if (reg_user_txt.Text == "")
             {
-                MessageBox.Show("Falta llenar uno o más campos");
+                MessageBox.Show("Falta llenar un campo", "ERROR");
             }
             else if (reg_psw_txt.Text == "")
             {
-                MessageBox.Show("Falta llenar uno o más campos");
+                MessageBox.Show("Falta llenar un campo", "ERROR");
             }
-            else 
+            else if (reg_user_txt.Text == "" && reg_psw_txt.Text == "") 
             {
-              // aqui va "Reg();"
+                 MessageBox.Show("TODOS LOS CAMPOS ESTAN VACIOS", "ERROR");
+            }
+            else
+            {
+                // aqui va "Reg();"
             }
         }
 
