@@ -11,40 +11,34 @@ using MySql.Data.MySqlClient;
 
 namespace Practica_Login_Cabral_Leon_Vargas
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void registro_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void user_txt_TextChanged(object sender, EventArgs e)
+        private void reg_user_txt_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void psw_txt_TextChanged(object sender, EventArgs e)
+        private void reg_psw_txt_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void login_button_Click(object sender, EventArgs e)
+        private void crear_btn_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Regist_clic_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Form2 registro = new Form2();
-            registro.Show();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void reg_Click(object sender, EventArgs e)
         {
 
         }
