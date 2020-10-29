@@ -20,6 +20,27 @@ namespace Practica_Login_Cabral_Leon_Vargas
         //aqui va la parte del codigo
         private void registro_Load(object sender, EventArgs e)
         {
+            private void Reg()
+            {
+                string connection = "datasource=localhost;port=3306;username=MarcoJeanLT;password=Mjean2*2=4;database=login;";
+                string query = "insert into log(`ID`,`usuario`, `contraseña`) VALUES (NULL,'" + reg_user_txt.Text + "', '" + reg_psw_txt.Text + "')";
+                MySqlConnection conectionDatabase = new MySqlConnection(connection);
+                MySqlCommand databaseCommand = new MySqlCommand(query, conectionDatabase);
+                databaseCommand.CommandTimeout = 60;
+
+                try
+                {
+                    conectionDatabase.Open();
+                    MySqlDataReader reader1 = databaseCommand.ExecuteReader();
+                    MessageBox.Show("Registro Exitoso \n Cierre esta ventana e inicie sesión", "HECHO");
+                    conectionDatabase.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
 
         }
 
@@ -50,6 +71,7 @@ namespace Practica_Login_Cabral_Leon_Vargas
             else
             {
                 // aqui va "Reg();"
+
             }
         }
 
