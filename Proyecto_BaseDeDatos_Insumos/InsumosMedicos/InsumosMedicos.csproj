@@ -47,11 +47,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos_cliente.Designer.cs">
+      <DependentUpon>Productos_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="productos_vendedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="productos_vendedores.Designer.cs">
+      <DependentUpon>productos_vendedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,8 +79,23 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vendedores_contacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendedores_contacto.Designer.cs">
+      <DependentUpon>Vendedores_contacto.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos_cliente.resx">
+      <DependentUpon>Productos_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="productos_vendedores.resx">
+      <DependentUpon>productos_vendedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -75,6 +108,9 @@
     </Compile>
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedores_contacto.resx">
+      <DependentUpon>Vendedores_contacto.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

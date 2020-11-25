@@ -24,3 +24,7 @@ C:\Users\oficina1\Desktop\UPCI\cuatri6\Base de Datos\Github\Base-de-Datos\Proyec
 C:\Users\oficina1\Desktop\UPCI\cuatri6\Base de Datos\Github\Base-de-Datos\Proyecto_BaseDeDatos_Insumos\InsumosMedicos\obj\Debug\InsumosMedicos.exe.config
 C:\Users\oficina1\Desktop\UPCI\cuatri6\Base de Datos\Github\Base-de-Datos\Proyecto_BaseDeDatos_Insumos\InsumosMedicos\obj\Debug\InsumosMedicos.Registro.resources
 C:\Users\oficina1\Desktop\UPCI\cuatri6\Base de Datos\Github\Base-de-Datos\Proyecto_BaseDeDatos_Insumos\InsumosMedicos\obj\Debug\InsumosMedicos.csproj.CopyComplete
+C:\Users\oficina1\Desktop\UPCI\cuatri6\Base de Datos\Github\Base-de-Datos\Proyecto_BaseDeDatos_Insumos\InsumosMedicos\obj\Debug\InsumosMedicos.productos_vendedores.resources
+C:\Users\oficina1\Desktop\UPCI\cuatri6\Base de Datos\Github\Base-de-Datos\Proyecto_BaseDeDatos_Insumos\InsumosMedicos\obj\Debug\InsumosMedicos.Clientes.resources
+C:\Users\oficina1\Desktop\UPCI\cuatri6\Base de Datos\Github\Base-de-Datos\Proyecto_BaseDeDatos_Insumos\InsumosMedicos\obj\Debug\InsumosMedicos.Productos_cliente.resources
+C:\Users\oficina1\Desktop\UPCI\cuatri6\Base de Datos\Github\Base-de-Datos\Proyecto_BaseDeDatos_Insumos\InsumosMedicos\obj\Debug\InsumosMedicos.Vendedores_contacto.resources

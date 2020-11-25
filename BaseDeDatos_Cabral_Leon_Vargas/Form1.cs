@@ -224,14 +224,6 @@ namespace BaseDeDatos_Cabral_Leon_Vargas
                 {
                     MessageBox.Show("Falta llenar uno o más campos");
                 }
-                else if (textBox4.Text == "")
-                {
-                    MessageBox.Show("Falta llenar uno o más campos");
-                }
-                else if (textBox5.Text == "")
-                {
-                    MessageBox.Show("Falta llenar uno o más campos");
-                }
                 else
                 {
 

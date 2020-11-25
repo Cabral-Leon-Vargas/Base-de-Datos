@@ -40,19 +40,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ApellidoPaterno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ApellidoMaterno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Edad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Direccion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // button1
@@ -174,53 +174,17 @@
             this.label5.Text = "Dirección";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // listView1
+            // button6
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ID,
-            this.Nombre,
-            this.ApellidoPaterno,
-            this.ApellidoMaterno,
-            this.Edad,
-            this.Direccion});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(25, 69);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(596, 239);
-            this.listView1.TabIndex = 12;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // ID
-            // 
-            this.ID.Text = "ID";
-            this.ID.Width = 48;
-            // 
-            // Nombre
-            // 
-            this.Nombre.Text = "Nombre (s)";
-            this.Nombre.Width = 97;
-            // 
-            // ApellidoPaterno
-            // 
-            this.ApellidoPaterno.Text = "Apellido Paterno";
-            this.ApellidoPaterno.Width = 106;
-            // 
-            // ApellidoMaterno
-            // 
-            this.ApellidoMaterno.Text = "Apellido Materno";
-            this.ApellidoMaterno.Width = 114;
-            // 
-            // Edad
-            // 
-            this.Edad.Text = "Edad";
-            this.Edad.Width = 43;
-            // 
-            // Direccion
-            // 
-            this.Direccion.Text = "Dirección";
-            this.Direccion.Width = 195;
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(588, 356);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(184, 42);
+            this.button6.TabIndex = 18;
+            this.button6.Text = "Limpiar campos";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // button3
             // 
@@ -278,23 +242,59 @@
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // button6
+            // ID
             // 
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(588, 356);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(184, 42);
-            this.button6.TabIndex = 18;
-            this.button6.Text = "Limpiar campos";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            this.ID.Text = "ID";
+            this.ID.Width = 48;
+            // 
+            // Nombre
+            // 
+            this.Nombre.Text = "Nombre (s)";
+            this.Nombre.Width = 97;
+            // 
+            // ApellidoPaterno
+            // 
+            this.ApellidoPaterno.Text = "Apellido Paterno";
+            this.ApellidoPaterno.Width = 106;
+            // 
+            // ApellidoMaterno
+            // 
+            this.ApellidoMaterno.Text = "Apellido Materno";
+            this.ApellidoMaterno.Width = 114;
+            // 
+            // Edad
+            // 
+            this.Edad.Text = "Edad";
+            this.Edad.Width = 43;
+            // 
+            // Direccion
+            // 
+            this.Direccion.Text = "Dirección";
+            this.Direccion.Width = 195;
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
+            this.Nombre,
+            this.ApellidoPaterno,
+            this.ApellidoMaterno,
+            this.Edad,
+            this.Direccion});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(25, 69);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(596, 239);
+            this.listView1.TabIndex = 12;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 455);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox6);
@@ -336,19 +336,19 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader Nombre;
         private System.Windows.Forms.ColumnHeader ApellidoPaterno;
         private System.Windows.Forms.ColumnHeader ApellidoMaterno;
         private System.Windows.Forms.ColumnHeader Edad;
         private System.Windows.Forms.ColumnHeader Direccion;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ListView listView1;
     }
 }
 
