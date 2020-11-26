@@ -26,17 +26,48 @@ namespace InsumosMedicos
 
             try
             {
-                conectionDatabase.Open();
-                MySqlDataReader reader1 = databaseCommand.ExecuteReader();
-                MessageBox.Show("Registro Exitoso \n Cierre esta ventana e inicie sesión", "HECHO");
-                reg_psw_txt.Text = "";
-                reg_hosp_txt.Text = "";
-                reg_cell_txt.Text = "";
-                reg_ape_txt.Text = "";
-                reg_direc_txt.Text = "";
-                reg_name_txt.Text = "";
-                reg_user_txt.Text = "";
-                conectionDatabase.Close();
+                if (reg_psw_txt.Text == "")
+                {
+                    MessageBox.Show("Falta llenar uno o más campos", "ERROR");
+                }
+                else if (reg_name_txt.Text == "")
+                {
+                    MessageBox.Show("Falta llenar uno o más campos", "ERROR");
+                }
+                else if (reg_user_txt.Text == "")
+                {
+                    MessageBox.Show("Falta llenar uno o más campos", "ERROR");
+                }
+                else if (reg_ape_txt.Text == "")
+                {
+                    MessageBox.Show("Falta llenar uno o más campos", "ERROR");
+                }
+                else if (reg_cell_txt.Text == "")
+                {
+                    MessageBox.Show("Falta llenar uno o más campos", "ERROR");
+                }
+                else if (reg_direc_txt.Text == "")
+                {
+                    MessageBox.Show("Falta llenar uno o más campos", "ERROR");
+                }
+                else if (reg_hosp_txt.Text == "")
+                {
+                    MessageBox.Show("Falta llenar uno o más campos", "ERROR");
+                }
+                else
+                {
+                    conectionDatabase.Open();
+                    MySqlDataReader reader1 = databaseCommand.ExecuteReader();
+                    MessageBox.Show("Registro Exitoso \n Cierre esta ventana e inicie sesión", "HECHO");
+                    reg_psw_txt.Text = "";
+                    reg_hosp_txt.Text = "";
+                    reg_cell_txt.Text = "";
+                    reg_ape_txt.Text = "";
+                    reg_direc_txt.Text = "";
+                    reg_name_txt.Text = "";
+                    reg_user_txt.Text = "";
+                    conectionDatabase.Close();
+                }
             }
             catch (Exception ex)
             {
@@ -57,17 +88,45 @@ namespace InsumosMedicos
 
             try
             {
-                conectionDatabase.Open();
-                MySqlDataReader reader1 = databaseCommand.ExecuteReader();
-                MessageBox.Show("Registro Exitoso \n Cierre esta ventana e inicie sesión", "HECHO");
-                reg_psw_txt.Text = "";
-                reg_hosp_txt.Text = "";
-                reg_cell_txt.Text = "";
-                reg_ape_txt.Text = "";
-                reg_direc_txt.Text = "";
-                reg_name_txt.Text = "";
-                reg_user_txt.Text = "";
-                conectionDatabase.Close();
+                
+                if (reg_psw_txt.Text == "")
+                {
+                    MessageBox.Show("Falta llenar uno o más campos", "ERROR");
+                }
+                else if (reg_name_txt.Text == "")
+                {
+                    MessageBox.Show("Falta llenar uno o más campos", "ERROR");
+                }
+                else if (reg_user_txt.Text == "")
+                {
+                    MessageBox.Show("Falta llenar uno o más campos", "ERROR");
+                }
+                else if (reg_ape_txt.Text == "")
+                {
+                    MessageBox.Show("Falta llenar uno o más campos", "ERROR");
+                }
+                else if (reg_cell_txt.Text == "")
+                {
+                    MessageBox.Show("Falta llenar uno o más campos", "ERROR");
+                }
+                else if (reg_direc_txt.Text == "")
+                {
+                    MessageBox.Show("Falta llenar uno o más campos", "ERROR");
+                }
+                else
+                {
+                    conectionDatabase.Open();
+                    MySqlDataReader reader1 = databaseCommand.ExecuteReader();
+                    MessageBox.Show("Registro Exitoso \n Cierre esta ventana e inicie sesión", "HECHO");
+                    reg_psw_txt.Text = "";
+                    reg_hosp_txt.Text = "";
+                    reg_cell_txt.Text = "";
+                    reg_ape_txt.Text = "";
+                    reg_direc_txt.Text = "";
+                    reg_name_txt.Text = "";
+                    reg_user_txt.Text = "";
+                    conectionDatabase.Close();
+                }
             }
             catch (Exception ex)
             {
